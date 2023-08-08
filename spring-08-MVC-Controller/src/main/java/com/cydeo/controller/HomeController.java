@@ -10,4 +10,19 @@ public class HomeController {
     public String home (){
         return "home.html";
     }
+
+    @RequestMapping("/aytu")
+    public String aytu (){
+        return "home.html";
+    }
+
+    @RequestMapping // nothing and /
+    public String homeDefault (){
+        return "home.html";
+    }
+
+    @RequestMapping({"/apple","banana"})
+    public String home1 (){
+        return "home.html";
+    }
 }
