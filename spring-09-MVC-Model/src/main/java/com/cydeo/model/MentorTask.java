@@ -1,5 +1,6 @@
 package com.cydeo.model;
 
+import com.cydeo.enums.GenderTask;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

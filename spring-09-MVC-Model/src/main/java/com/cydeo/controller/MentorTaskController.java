@@ -1,6 +1,6 @@
 package com.cydeo.controller;
 
-import com.cydeo.model.GenderTask;
+import com.cydeo.enums.GenderTask;
 import com.cydeo.model.MentorTask;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
