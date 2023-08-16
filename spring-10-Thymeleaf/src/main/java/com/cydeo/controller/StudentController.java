@@ -22,7 +22,7 @@ public class StudentController {
     @RequestMapping(value = "/welcome",method = RequestMethod.POST) //localhost:8080/student/welcome?name=Ozzy
     @PostMapping("/welcome")
     public String welcome(@RequestParam String name){
-
+        System.out.println(name);
         return "student/welcome";
     }
 

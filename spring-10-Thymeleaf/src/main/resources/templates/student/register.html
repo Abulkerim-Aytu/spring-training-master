@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title th:text="#{index.page.title}"></title>
@@ -35,6 +35,15 @@
 
 <h2>
     <a th:href="@{/student/welcome}">Welcome</a>
+</h2>
+
+<!--Adding Parameters in Link-->
+<h2>
+    <a th:href="@{/student/welcome(id=3)}">Link1</a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Link2</a>
 </h2>
 
 </body>
