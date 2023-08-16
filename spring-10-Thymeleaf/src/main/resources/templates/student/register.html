@@ -20,8 +20,6 @@
 <img th:src="@{/images/welcome-38249.png}">
 
 
-
-
 <!--Display Value of model-->
 <h2 th:text="${students.get(0).firstName}"></h2>
 <h2 th:text="${students.get(0).lastName}"></h2>
@@ -29,6 +27,15 @@
 <!--Concatenation-->
 <h2 th:text="${ 'Hello' + students.get(0).firstName}"></h2>
 <h2 th:text="${ students.get(0).firstName + ' ' + students.get(0).lastName}"></h2>
+
+<!--Link-->
+<h2>
+    <a th:href="@{https://cydeo.com}">Cydeo Page</a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome}">Welcome</a>
+</h2>
 
 </body>
 </html>
