@@ -32,7 +32,6 @@
 <h2>
     <a th:href="@{https://cydeo.com}">Cydeo Page</a>
 </h2>
-
 <h2>
     <a th:href="@{/student/welcome}">Welcome</a>
 </h2>
@@ -79,6 +78,17 @@
 
     </tbody>
 </table>
+
+<!--Conditional Logic-->
+
+<div th:text="${students.get(0).age > 25 ? 'Eligible' : 'Not Eligible'}"></div>
+
+<div>
+    <span th:if="${students.get(0).getState()=='Arizona'}">Arizona</span>
+    <span th:unless="${students.get(0).getState()=='Arizona'}">No Arizona</span>
+</div>
+
+
 
 
 
