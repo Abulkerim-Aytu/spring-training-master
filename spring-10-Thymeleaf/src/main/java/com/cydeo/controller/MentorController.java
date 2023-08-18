@@ -18,6 +18,9 @@ public class MentorController {
     @GetMapping("/register") //localhost:8080/mentor/register
     public String register(Model model) {
 
+        List<String> batchList = Arrays. asList ("JD1", "JD2", "JD3");
+        model.addAttribute ( "batchList" ,batchList) ;
+
         model.addAttribute("mentor",new Mentor());
 
         return "mentor/mentor-register";
