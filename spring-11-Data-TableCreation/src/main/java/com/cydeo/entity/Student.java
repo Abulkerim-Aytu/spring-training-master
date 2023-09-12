@@ -1,5 +1,6 @@
 package com.cydeo.entity;
 
+import com.cydeo.enums.Gender;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
@@ -27,5 +28,12 @@ public class Student {
         private LocalTime birthTime;
         @Column(columnDefinition = "TIMESTAMP")
         private LocalDateTime birthDateTime;
+
+//    @Enumerated(EnumType.ORDINAL)
+        @Enumerated(EnumType.STRING)
+        private Gender gender;
+
+        @Transient
+        private String city;
 
 }
