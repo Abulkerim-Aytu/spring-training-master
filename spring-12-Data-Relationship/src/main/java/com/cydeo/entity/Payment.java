@@ -19,15 +19,19 @@ public class Payment {
     private Long id;
 
     @Column(columnDefinition = "DATE")
-    private LocalDate createDate;
+    private LocalDate createdDate;
 
     private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
     private Status paymentStatus;
 
+    @OneToOne
+    // @JoinColumn(name = "payment_detail_id")
+    private PaymentDetail paymentDetail;
+
     public Payment(LocalDate createDate, BigDecimal amount, Status paymentStatus) {
-        this.createDate = createDate;
+        this.createdDate = createDate;
         this.amount = amount;
         this.paymentStatus = paymentStatus;
     }
