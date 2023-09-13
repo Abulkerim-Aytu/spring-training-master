@@ -26,10 +26,13 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     private Status paymentStatus;
 
-    // @JoinColumn(name = "payment_detail_id")
     //@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "payment_detail_id")
     @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     private PaymentDetail paymentDetail;
+
+    @ManyToOne
+    private Merchant merchant;
 
     public Payment(LocalDate createDate, BigDecimal amount, Status paymentStatus) {
         this.createdDate = createDate;
