@@ -3,10 +3,8 @@ package com.cydeo.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
@@ -18,4 +16,17 @@ public class MovieCinema {
     private Long Id;
 
 
+    @Column(columnDefinition = "DATE")
+    private LocalDate dateTime;
+
+    @ManyToOne
+    private Cinema cinema;
+
+    @ManyToOne
+    private Movie movie;
+
+
+    public MovieCinema(LocalDate dateTime) {
+        this.dateTime = dateTime;
+    }
 }
