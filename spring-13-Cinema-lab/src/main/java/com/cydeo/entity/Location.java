@@ -24,10 +24,8 @@ public class Location {
     private String postalCode;
     private String address;
 
-    public Location(String name, String latitude, String longitude, String country, String city, String state, String postalCode, String address) {
+    public Location(String name, String country, String city, String state, String postalCode, String address) {
         this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
         this.country = country;
         this.city = city;
         this.state = state;

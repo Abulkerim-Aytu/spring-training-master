@@ -21,5 +21,15 @@ private LocalDate dateTime;
 private int seatNumber;
 private int rowNumber;
 
+@ManyToOne
+private UserAccount userAccount;
 
+@ManyToOne
+private MovieCinema movieCinema;
+
+    public Ticket(LocalDate dateTime, int seatNumber, int rowNumber) {
+        this.dateTime = dateTime;
+        this.seatNumber = seatNumber;
+        this.rowNumber = rowNumber;
+    }
 }
