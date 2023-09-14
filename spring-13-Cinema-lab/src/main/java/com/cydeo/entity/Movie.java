@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -34,6 +35,10 @@ private String summary;
 
 @Enumerated(EnumType.STRING)
 private Types type;
+
+@ManyToMany
+@JoinTable(name = "MovieGenreRel")
+private List<Genre> genreList;
 
     public Movie(Integer duration, String name, BigDecimal price, LocalDate releaseDate, State state, String summary, Types type) {
         this.duration = duration;
