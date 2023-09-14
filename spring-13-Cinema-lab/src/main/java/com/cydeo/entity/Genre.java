@@ -17,8 +17,6 @@ private Long id;
 
 private String name;
 
-@ManyToMany(mappedBy = "genreList")
-private List<Movie> movieList;
 
     public Genre(String name) {
         this.name = name;

@@ -38,7 +38,7 @@ private Types type;
 
 @ManyToMany
 @JoinTable(name = "MovieGenreRel")
-private List<Genre> genreList;
+private List<Genre> genre;
 
     public Movie(Integer duration, String name, BigDecimal price, LocalDate releaseDate, State state, String summary, Types type) {
         this.duration = duration;
