@@ -13,11 +13,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class Movie {
-
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
+public class Movie extends BaseEntity{
 
 private int duration;
 

@@ -10,10 +10,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @Data
-public class Location {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+public class Location extends BaseEntity {
 
     private String name;
     private String latitude;

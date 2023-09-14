@@ -10,11 +10,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 
-public class Ticket {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
-
+public class Ticket extends BaseEntity{
 @Column(columnDefinition = "DATE")
 private LocalDate dateTime;
 

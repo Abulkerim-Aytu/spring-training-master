@@ -9,12 +9,7 @@ import java.time.LocalDate;
 @Entity
 @NoArgsConstructor
 @Data
-public class MovieCinema {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-
+public class MovieCinema extends BaseEntity{
 
     @Column(columnDefinition = "DATE")
     private LocalDate dateTime;

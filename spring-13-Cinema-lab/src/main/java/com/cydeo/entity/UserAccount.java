@@ -9,10 +9,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 
-public class UserAccount {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
+public class UserAccount extends BaseEntity{
 
 private String email;
 private String password;

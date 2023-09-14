@@ -8,11 +8,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Data
-public class Cinema {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+public class Cinema extends BaseEntity {
 
     private String name;
     private String sponsoredName;
