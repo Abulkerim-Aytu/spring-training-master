@@ -25,6 +25,7 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findByCountryContaining:" + regionRepository.findByCountryContaining("United"));
         System.out.println("findByCountryContainsOrderByRegion:" + regionRepository.findByCountryContainsOrderByRegion("United"));
         System.out.println("findTop2ByCountry:" + regionRepository.findTop2ByCountry("United States"));
+        System.out.println("findTopByCountryContainsOrderByRegion:" + regionRepository.findTopByCountryContainsOrderByRegion("United States"));
 
 
     }
