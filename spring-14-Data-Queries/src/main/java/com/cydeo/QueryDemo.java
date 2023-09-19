@@ -22,6 +22,10 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("-----------REGIONS-----------");
 
         System.out.println("findByCountry:" + regionRepository.findByCountry("Canada"));
+        System.out.println("findByCountryContaining:" + regionRepository.findByCountryContaining("United"));
+        System.out.println("findByCountryContainsOrderByRegion:" + regionRepository.findByCountryContainsOrderByRegion("United"));
+        System.out.println("findTop2ByCountry:" + regionRepository.findTop2ByCountry("United States"));
 
-       }
+
+    }
 }
