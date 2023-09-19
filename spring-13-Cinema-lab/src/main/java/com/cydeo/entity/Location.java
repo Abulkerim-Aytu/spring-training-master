@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.List;
 
 
@@ -13,8 +14,8 @@ import java.util.List;
 public class Location extends BaseEntity {
 
     private String name;
-    private String latitude;
-    private String longitude;
+    private BigDecimal latitude;
+    private BigDecimal longitude;
     private String country;
     private String city;
     private String state;
