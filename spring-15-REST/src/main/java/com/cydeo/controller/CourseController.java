@@ -5,7 +5,7 @@ import com.cydeo.service.CourseService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+// These all are API EndPoints
 @RestController //@Controller + @ResponseBody // with this Annotation MVC' VIEW is are out of box, we use API instead of view in here.
 @RequestMapping("/courses")
 public class CourseController {
@@ -40,7 +40,7 @@ public class CourseController {
         return courseService.createCourse(course);
     }
 
-    @PutMapping("id")
+    @PutMapping("{id}")
     public void updateCourse(@PathVariable("id") long courseId, @RequestBody CourseDTO course){
         courseService.updateCourse(courseId,course);
     }
