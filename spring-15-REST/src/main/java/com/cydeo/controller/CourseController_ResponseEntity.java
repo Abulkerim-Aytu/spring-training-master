@@ -2,6 +2,7 @@ package com.cydeo.controller;
 
 import com.cydeo.dto.CourseDTO;
 import com.cydeo.service.CourseService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +20,13 @@ public class CourseController_ResponseEntity {
         this.courseService = courseService;
     }
 
-
     // With help of ResponseEntity class we can pass headers, we can manipulate statues code.
     @GetMapping
     public ResponseEntity<List<CourseDTO>> getAllCourses(){
-
+    return ResponseEntity
+            .status(HttpStatus.ACCEPTED)
+            .header("Veersion", "Cydeo.V2")
+            .header("Operation", "Get List")
+            .body(courseService.getCourses());
     }
 }
