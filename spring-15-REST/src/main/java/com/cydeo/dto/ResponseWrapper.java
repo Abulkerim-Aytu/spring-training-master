@@ -9,11 +9,12 @@ import org.springframework.http.HttpStatus;
 @Setter
 @NoArgsConstructor
 public class ResponseWrapper {
+    // This class is created for customize JSON Objects.
 
     private boolean success;
     private String message;
     private Integer code;
-    private Object data;
+    private Object data; // here we use Object because to handle different objects like abcDTO, htfDTO..etc.
 
     public ResponseWrapper(String message,Object data){
         this.message = message;
