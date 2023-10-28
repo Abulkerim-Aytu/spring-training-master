@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController //@Controller + @ResponseBody // with this Annotation MVC' VIEW is are out of box, we use API instead of view in here.
-@RequestMapping("/courses/api/v1")
+@RequestMapping("/courses")
 public class CourseController {
 
     // what ever we put in to the controllers are DTO
@@ -18,13 +18,18 @@ public class CourseController {
         this.courseService = courseService;
     }
 
-
     @GetMapping
     public List<CourseDTO> getAllCourses(){
 
         // return all courses
         return courseService.getCourses();
     }
+
+    @GetMapping("{id}")
+    public CourseDTO getCourseById(@PathVariable("id")long courseId){
+        return courseService.getCourseById(courseId);
+    }
+
 
 
 
