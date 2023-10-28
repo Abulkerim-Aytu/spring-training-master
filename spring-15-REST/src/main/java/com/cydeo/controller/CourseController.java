@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 // These all are API EndPoints
 @RestController //@Controller + @ResponseBody // with this Annotation MVC' VIEW is are out of box, we use API instead of view in here.
-@RequestMapping("/courses")
+@RequestMapping("/courses/api/v1") // this is the best practice to create EndPoints in api
 public class CourseController {
 
     // what ever we put in to the controllers are DTO
