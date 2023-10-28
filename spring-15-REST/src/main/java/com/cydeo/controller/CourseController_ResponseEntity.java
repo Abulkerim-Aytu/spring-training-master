@@ -5,11 +5,13 @@ import com.cydeo.service.CourseService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 // In this controller we try to manipulate some things like: change status code, past headers ..etc.
+// Java Developers prefer to use this type of api endpoint creation all the time.
 @RestController
 @RequestMapping("/courses/api/v2")
 public class CourseController_ResponseEntity {
@@ -29,4 +31,16 @@ public class CourseController_ResponseEntity {
             .header("Operation", "Get List")
             .body(courseService.getCourses());
     }
+
+    @GetMapping("{id}")
+    public ResponseEntity<CourseDTO> getCourseById(@PathVariable("id") long id){
+        return ResponseEntity.ok(courseService.getCourseById(id));
+        // the basic one si .OK
+    }
+
+    @GetMapping("category/{name}")
+    public ResponseEntity<List<CourseDTO>> getCourseByCategory(@PathVariable("name") String courseCategory){
+        return ResponseEntity.ok(courseService.getCoursesByCategory(courseCategory));
+    }
+
 }
