@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 // In this controller we try to manipulate some things like: change status code, past headers ..etc.
-// Java Developers prefer to use this type of api endpoint creation all the time.
 @RestController
 @RequestMapping("/courses/api/v2")
 public class CourseController_ResponseEntity {
