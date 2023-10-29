@@ -19,4 +19,6 @@ public class Spring17RestConsumingApisApplication {
         return new RestTemplate();
     }
 
+
+
 }
