@@ -19,6 +19,7 @@ public class Consume_RestTemplate {
         this.restTemplate = restTemplate;
     }
 
+    // getForEntity = if we want to get consuming api to our project with help of xxx the data mapped to our dto and ass output we will see what ever our dto has it.
     @GetMapping
     public ResponseEntity<User[]> realAllUsers(){
         return restTemplate.getForEntity(URI, User[].class); // this method return ResponseEntity
@@ -26,10 +27,14 @@ public class Consume_RestTemplate {
 
     // getForEntity() method we can modify dto variables
     // but gerForObject we can not modify dto variables, we can just get what is gived to us.
+
+    // getForObject = we don't have dto it is just taking the third party api and what ever json result is we will see it in our endpoint result.
     @GetMapping("{id}")
     public Object readUser (@PathVariable("id") Integer id){
         String URL = URI + "/{id}";
         return restTemplate.getForObject(URL, Object.class,id);
     }
+
+
 
 }
