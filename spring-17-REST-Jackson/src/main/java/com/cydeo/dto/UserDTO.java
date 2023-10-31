@@ -20,6 +20,7 @@ public class UserDTO {
     private UserRole role;
 
     @JsonManagedReference  // This field is going to be serialized
+    // This annotation mean show AccountDTO inside UserDTO
     private AccountDTO account;
 
 }

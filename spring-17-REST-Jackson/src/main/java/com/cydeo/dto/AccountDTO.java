@@ -21,7 +21,8 @@ public class AccountDTO {
     private Integer age;
     private String postalCode;
 
-    @JsonBackReference  // This field is not going to be serialized
+    @JsonBackReference  // This field is not going to be serialized (we are not going to see this object to converted as json inside AccountDTO)
+    // This annotation mean hide UserDTO inside the AccountDTO
     private UserDTO user;
 
 }
