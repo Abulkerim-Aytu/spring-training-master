@@ -14,6 +14,7 @@ public class UserDTO {
 
     private String email;
 
+    // @JsonProperty = with help of this annotation we can manipulate fields
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     private String username;

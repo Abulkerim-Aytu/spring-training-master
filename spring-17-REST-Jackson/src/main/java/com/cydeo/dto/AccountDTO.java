@@ -10,11 +10,13 @@ import lombok.*;
 @NoArgsConstructor
 //@JsonIgnoreProperties(value = {"address", "country"}, ignoreUnknown = true)
 // if I want to ignore multiple fields.
-@JsonIgnoreProperties(ignoreUnknown = true) // Unknown fields that are coming from outside are not getting to our app.(mostly unmatch fields)
+@JsonIgnoreProperties(ignoreUnknown = true)
+// (ignoreUnknown = true) = Unknown fields that are coming from outside are not getting to our app.(mostly unMatch fields, we can say this is an extra protection)
 public class AccountDTO {
 
-    @JsonIgnore // Ignore completely
+    @JsonIgnore // Ignore field completely
     private String name;
+
     private String address;
     private String country;
     private String state;
