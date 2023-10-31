@@ -29,6 +29,8 @@ public class AddressDTO {
 
     private AddressType addressType;
 
+//    If two DTO.class have relationship it will give us StackOverFlowError
+//    So to handle this problem we can use @JsonBackReference and JsonManagedReference
     @JsonBackReference(value = "student-address-reference")          // defaultReference
     private StudentDTO student;
 
