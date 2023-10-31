@@ -1,3 +1,4 @@
+/*
 package com.cydeo.service.impl;
 
 import com.cydeo.client.WeatherApiClient;
@@ -90,3 +91,4 @@ public class AddressServiceImpl implements AddressService {
     }
 
 }
+*/
