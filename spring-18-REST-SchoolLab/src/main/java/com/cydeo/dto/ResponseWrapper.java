@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
-
+// this only can manipulate the response body adn ResponseEntity can manipulate the Header and Status code
 @Getter
 @Setter
 @AllArgsConstructor
