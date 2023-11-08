@@ -7,6 +7,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
+//This class catch the Access Token from Organization app and put that token to this app manually.
 @Component
 public class FeignClientInterceptor implements RequestInterceptor {
 
