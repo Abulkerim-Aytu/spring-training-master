@@ -19,6 +19,7 @@ public class OrganizationController {
     }
 
     @GetMapping("/{organizationId}")
+    // This annotation means; only the people who are "ADMIN","USER" can run/get/post/delete...etc this endpoints.
     @RolesAllowed({"ADMIN","USER"})
     public ResponseEntity<Organization> getOrganization(@PathVariable("organizationId") Long organizationId) throws Exception {
         return ResponseEntity.ok(organizationService.findById(organizationId));
