@@ -18,6 +18,7 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 
 @Configuration
 @EnableWebSecurity
+// this means: I am not going to define mine endMatchers(restriction) in the configure method (in this class), I define it on the controller methods with certain annotation.
 @EnableGlobalMethodSecurity(jsr250Enabled = true)
 public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 @Override
