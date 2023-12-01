@@ -1,10 +1,31 @@
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.nio.file.AccessDeniedException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
+
+//    BeforeAll And AfterAll annotated methods have to be STATIC
+    @BeforeAll
+    static void setUpAll(){
+        System.out.println("BeforeAll is executed.");
+    }
+
+    @AfterAll
+    static void tearDownAll(){
+        System.out.println("AfterAll is executed.");
+    }
+
+    @BeforeEach
+    void setUpEach(){
+        System.out.println("BeforeEach is executed.");
+    }
+
+    @AfterEach
+    void AfterEach(){
+        System.out.println("AfterEach is executed.");
+    }
 
     @Test
     void add(){
