@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.nio.file.AccessDeniedException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
@@ -12,9 +14,17 @@ class CalculatorTest {
     }
 
     @Test
+    void add2(){
+        System.out.println("Add2 methods");
+//        assertThrows(IllegalArgumentException.class,() -> Calculator.add2(3,2));
+//        assertThrows(AccessDeniedException.class,() -> Calculator.add2(3,2));
+        assertThrows(IllegalArgumentException.class,() -> Calculator.add2(2,3));
+    }
+
+    @Test
     void testCase1(){
         System.out.println("Test Case 1");
-        fail("Not implemented yet.");
+//        fail("Not implemented yet.");
     }
 
     @Test
