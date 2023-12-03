@@ -15,6 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(WelcomeController.class)
 public class WelcomeControllerTest {
 
+//    Help of MockMvc we can send request to test(in some way like postman)
     @Autowired
     private MockMvc mvc;
 
@@ -35,12 +36,15 @@ public class WelcomeControllerTest {
     }
 
 //    This one is the most preferred one in the market.
+//    Here we are doing Exactly the same thing on Postman.
     @Test
     void welcome_Test2() throws Exception {
 
+//      Here we are define the type of request.
         RequestBuilder request = MockMvcRequestBuilders.get("/welcome")
                 .accept(MediaType.APPLICATION_JSON);
 
+//      Here we are define the expected response.
         mvc.perform(request)
                 .andExpect(status().isOk())
                 .andExpect(content().string("welcome"))
