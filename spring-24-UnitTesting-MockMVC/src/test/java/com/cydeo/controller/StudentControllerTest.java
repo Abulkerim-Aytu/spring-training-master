@@ -33,7 +33,7 @@ public class StudentControllerTest {
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"firstName\": \"Mike\", \"lastName\":  \"Smith\", \"age\": 20}"))
-                .andDo(print())
+                .andDo(print()) // This is going to print the result on console.
                 .andReturn();
 
     }
